@@ -17,6 +17,7 @@ export default defineType({
 			options: {
 				list: [
 					'action',
+					{ title: 'Action (accent)', value: 'action-accent' },
 					{ title: 'Action (outline)', value: 'action-outline' },
 					'ghost',
 					'link',

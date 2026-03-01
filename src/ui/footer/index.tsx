@@ -8,7 +8,7 @@ export default async function () {
 	const site = await getSite()
 
 	return (
-		<footer>
+		<footer className="bg-canvas-dark text-white">
 			<div className="section space-y-4">
 				<div className="flex justify-between gap-4 max-md:flex-col md:items-start">
 					<div className="flex flex-col items-center gap-4 max-md:text-center md:items-start">

@@ -88,6 +88,20 @@ export const MODULES_QUERY = groq`
 			_type == 'reference' => @->
 		}
 	},
+	_type == 'pricing-table' => {
+		...,
+		tiers[]{
+			...,
+			cta{
+				...,
+				link{ ${LINK_QUERY} }
+			}
+		},
+		ctas[]{
+			...,
+			link{ ${LINK_QUERY} }
+		}
+	},
 	_type == 'prose' => {
 		content[]{
 			...,

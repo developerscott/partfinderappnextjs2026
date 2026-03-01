@@ -16,6 +16,7 @@ import CustomHTML from './custom-html'
 import HeroSplit from './hero.split'
 import LogoList from './logo-list'
 import PersonList from './person-list'
+import PricingTable from './pricing-table'
 import Prose from './prose'
 import QuoteList from './quote-list'
 import SearchModule from './search'
@@ -34,6 +35,7 @@ const MODULES_MAP = {
 	'hero.split': HeroSplit,
 	'logo-list': LogoList,
 	'person-list': PersonList,
+	'pricing-table': PricingTable,
 	prose: Prose,
 	'quote-list': QuoteList,
 	'search-module': SearchModule,

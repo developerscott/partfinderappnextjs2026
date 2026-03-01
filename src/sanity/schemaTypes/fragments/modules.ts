@@ -15,6 +15,7 @@ export default ({ of = [] }: { of?: Array<{ type: string }> } = {}) =>
 			{ type: 'hero.split' },
 			{ type: 'logo-list' },
 			{ type: 'person-list' },
+			{ type: 'pricing-table' },
 			{ type: 'prose' },
 			{ type: 'quote-list' },
 			{ type: 'search-module' },

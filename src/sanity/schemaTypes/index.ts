@@ -22,6 +22,7 @@ import customHtml from './modules/custom-html'
 import heroSplit from './modules/hero.split'
 import logoList from './modules/logo-list'
 import personList from './modules/person-list'
+import pricingTable from './modules/pricing-table'
 import prose from './modules/prose'
 import quoteList from './modules/quote-list'
 import searchModule from './modules/search-module'
@@ -71,6 +72,7 @@ export const schema: SchemaPluginOptions = {
 		heroSplit,
 		logoList,
 		personList,
+		pricingTable,
 		prose,
 		quoteList,
 		searchModule,

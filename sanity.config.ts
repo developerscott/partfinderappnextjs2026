@@ -41,11 +41,4 @@ export default defineConfig({
 		assist(),
 	],
 
-	beta: {
-		form: {
-			enhancedObjectDialog: {
-				enabled: false,
-			},
-		},
-	},
 })

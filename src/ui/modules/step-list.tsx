@@ -29,13 +29,11 @@ export default function ({
 			<ol className="grid gap-8">
 				{steps?.map((step, index) => (
 					<li
-						className="gap-ch flex items-start [counter-increment:step]"
-						{...(enableSchema && {
-							itemScope: true,
-							itemProp: 'step',
-							itemType: 'https://schema.org/HowToStep',
-						})}
 						key={step._key}
+						className="gap-ch flex items-start [counter-increment:step]"
+						itemScope={enableSchema || undefined}
+						itemProp={enableSchema ? 'step' : undefined}
+						itemType={enableSchema ? 'https://schema.org/HowToStep' : undefined}
 					>
 						<span className="h2 bg-foreground text-background size-8 shrink-0 rounded-full text-center before:content-[counter(step)]" />
 

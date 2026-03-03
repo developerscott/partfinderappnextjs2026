@@ -65,7 +65,7 @@ export default function ({
 
 	return (
 		<>
-			{modules?.map((module) => {
+			{modules?.map((module, index) => {
 				if (!module) return null
 
 				const Module = MODULES_MAP[
@@ -89,12 +89,16 @@ export default function ({
 						: {}
 
 				return (
-					<Module
-						{...module}
-						{...moduleSpecificProps(module)}
-						data-sanity={createDataAttribute(attributes)}
+					<div
+						className={index % 2 === 1 ? 'bg-surface' : undefined}
 						key={module._key}
-					/>
+					>
+						<Module
+							{...module}
+							{...moduleSpecificProps(module)}
+							data-sanity={createDataAttribute(attributes)}
+						/>
+					</div>
 				)
 			})}
 		</>

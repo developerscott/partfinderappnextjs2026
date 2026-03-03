@@ -8,7 +8,7 @@ import { moduleAttributes } from '.'
 export default function ({ content = [], ctas, image, ...props }: HeroSplit) {
 	return (
 		<section
-			className="section grid items-center gap-8 md:grid-cols-2"
+			className="section grid items-center gap-12 py-16 md:grid-cols-2 md:py-24"
 			{...moduleAttributes(props)}
 		>
 			<figure
@@ -18,7 +18,7 @@ export default function ({ content = [], ctas, image, ...props }: HeroSplit) {
 				)}
 			>
 				<Img
-					className="w-full"
+					className="w-full rounded-xl shadow-lg"
 					image={image}
 					width={600}
 					alt={image?.alt ?? ''}

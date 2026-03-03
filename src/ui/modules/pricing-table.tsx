@@ -26,10 +26,10 @@ export default function ({
 						<li
 							key={tier._key}
 							className={cn(
-								'flex flex-col gap-6 rounded-lg border p-6',
+								'flex flex-col gap-6 rounded-xl border p-6',
 								tier.highlighted
-									? 'border-accent shadow-lg shadow-accent/10 relative'
-									: 'border-stroke',
+									? 'border-2 border-accent shadow-xl shadow-accent/10 relative'
+									: 'border-stroke/50 bg-white shadow-sm',
 							)}
 						>
 							{tier.badge && (

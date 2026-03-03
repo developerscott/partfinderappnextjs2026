@@ -6,7 +6,7 @@ import { moduleAttributes } from '.'
 export default function ({ intro = [], ctas, ...props }: Callout) {
 	return (
 		<section className="section text-center" {...moduleAttributes(props)}>
-			<header className="prose mx-auto max-w-3xl text-balance">
+			<header className="prose mx-auto max-w-4xl text-balance">
 				<PortableText value={intro} />
 				<CTAList ctas={ctas} className="justify-center" />
 			</header>

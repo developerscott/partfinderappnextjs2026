@@ -9,8 +9,10 @@
 
 	--color-primary: var(--color-blue-800);
 
-	--color-canvas-dark: #1a2332;
-	--color-accent: #4a90d9;
+	--color-canvas-dark: #0f1a2e;
+	--color-accent: #3b82f6;
+	--color-accent-dark: #2563eb;
+	--color-surface: #f8fafc;
 
 	--spacing-lh: 1lh;
 	--spacing-ch: 1ch;
@@ -101,19 +103,22 @@
 	justify-content: center;
 	text-align: center;
 	gap: 0.5em;
-	padding: 0.25em 0.5em;
+	padding: 0.6em 1.4em;
+	border-radius: 0.5em;
+	font-weight: 600;
+	transition: all 0.2s ease;
 }
 
 @utility action {
-	@apply action-base bg-foreground text-background;
+	@apply action-base bg-foreground text-background shadow-sm hover:shadow-md;
 }
 
 @utility action-outline {
-	@apply action-base bg-background border border-stroke text-foreground hover:border-current;
+	@apply action-base bg-background border border-stroke text-foreground rounded-[0.5em] hover:border-current hover:bg-foreground/5;
 }
 
 @utility action-accent {
-	@apply action-base bg-accent text-white hover:brightness-110;
+	@apply action-base bg-accent text-white shadow-md shadow-accent/25 hover:bg-accent-dark hover:shadow-lg hover:shadow-accent/30;
 }
 
 @utility ghost {
@@ -132,19 +137,19 @@
 /* typography */
 
 @utility h0 {
-	@apply text-4xl font-bold;
+	@apply text-5xl font-bold tracking-tight;
 }
 
 @utility h1 {
-	@apply text-3xl font-bold;
+	@apply text-4xl font-bold tracking-tight;
 }
 
 @utility h2 {
-	@apply text-2xl font-bold;
+	@apply text-3xl font-bold tracking-tight;
 }
 
 @utility h3 {
-	@apply text-xl font-bold;
+	@apply text-xl font-semibold;
 }
 
 @utility h4 {
@@ -162,11 +167,11 @@
 /* components */
 
 @utility section {
-	@apply mx-auto max-w-7xl px-4 py-12 md:px-8;
+	@apply mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20;
 }
 
 @utility prose {
-	@apply space-y-4 leading-relaxed;
+	@apply space-y-4 leading-relaxed text-foreground/80;
 
 	& h1 {
 		@apply h1;

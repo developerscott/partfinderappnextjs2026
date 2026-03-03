@@ -14,7 +14,7 @@ export default function ({
 	return (
 		<div
 			className={cn(
-				'flex flex-wrap items-center gap-x-[.5em] gap-y-[.25em]',
+				'flex flex-wrap items-center gap-x-[1em] gap-y-[.5em]',
 				className,
 			)}
 		>

@@ -24,24 +24,29 @@ export default function ({ intro = [], cards, ctas, columns }: CardList) {
 					style={{ '--columns': columns } as React.CSSProperties}
 				>
 					{cards.map((item) => (
-						<li key={item._key} className="prose">
+						<li
+							key={item._key}
+							className="rounded-xl border border-stroke/50 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+						>
 							<Img
-								className="aspect-video w-full object-cover"
+								className="-mx-6 -mt-6 mb-4 aspect-video w-[calc(100%+3rem)] max-w-none rounded-t-xl object-cover"
 								image={item.image}
 								width={400}
 								alt=""
 							/>
 
 							<Img
-								className="h-12 object-cover"
+								className="mb-4 h-12 object-cover"
 								image={item.icon}
 								width={60}
 								alt=""
 							/>
 
-							<PortableText value={item.content ?? []} />
+							<div className="prose">
+								<PortableText value={item.content ?? []} />
 
-							<CTAList ctas={item.ctas} />
+								<CTAList ctas={item.ctas} />
+							</div>
 						</li>
 					))}
 				</ul>

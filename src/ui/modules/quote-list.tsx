@@ -21,7 +21,7 @@ export default function ({
 			>
 				{testimonials?.map((testimonial: any) => (
 					<li
-						className="flex flex-col gap-4 md:snap-start"
+						className="flex flex-col gap-4 rounded-xl border border-stroke/50 bg-white p-8 shadow-sm md:snap-start"
 						key={testimonial._key}
 					>
 						<blockquote className="prose grow">

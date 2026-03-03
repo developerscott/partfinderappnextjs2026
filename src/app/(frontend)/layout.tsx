@@ -8,6 +8,7 @@ import Footer from '@/ui/footer'
 import Header from '@/ui/header'
 import VisualEditing from '@/ui/modules/visual-editing'
 import '@/app.css'
+import "@@/styles/globals.css";
 
 const fontSans = Geist({
 	subsets: ['latin'],
